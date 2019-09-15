@@ -35,15 +35,17 @@
             </div>
         </div>
     </div>
+</div>
+<div class="container-fluid">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 text-center  ">
             {% if images %}
-                {% for image in images %}
-                    <img src="/media/{{ image }}" alt="">
-                {% endfor %}
-            {% else %}
+            {% for image in images %}
+                <img src="/media/{{ image }}" alt="" style="max-width: 24%" class="d-inline-flex">
+            {% endfor %}
+        {% else %}
                 Brak wyników wyszukiwania!
-            {% endif %}
+        {% endif %}
         </div>
     </div>
 </div>
