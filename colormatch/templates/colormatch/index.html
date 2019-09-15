@@ -25,7 +25,7 @@
                   <form action="{% url 'search' %}" method="POST">
                       {% csrf_token %}
                       <div class="py-1">
-                          <input type="color" name="color">
+                          <input type="color" name="color" {% if color_value %} value="{{ color_value }}" {% endif %}>
                       </div>
                       <div class="py-1">
                           <input type="submit" value="Wyślij">

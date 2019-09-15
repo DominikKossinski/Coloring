@@ -37,7 +37,7 @@ def search(request):
     for element in tab[:15]:
         images.append(Image.objects.filter(id=element[0])[0].file)
 
-    return render(request, 'colormatch/index.html', {'images': images})
+    return render(request, 'colormatch/index.html', {'images': images, 'color_value': request.POST['color']})
 
 def inde(cim, id):
     for i in range(len(cim)):
